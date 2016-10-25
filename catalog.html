@@ -9,13 +9,13 @@
       <div class="container">
 	    <div class="header-top">
 	      <div class="ht-logo">
-	  	    <a href="#" alt="Главная">Техномарт</a>
+	  	    <a href="#">Техномарт</a>
 	      </div>
 	  	  <div class="ht-navigation">
             <ul>
-  		      <li class="ht-search">Поиск:
-  		      	<form action="https://echo.htmlacademy.ru" method="get">
-  					<input type="text" name="search">
+  		      <li class="ht-search">
+  		      	<form action="https://echo.htmlacademy.ru" method="get" >
+  					<input type="text" name="search" value="Поиск:">
 				</form>
 		  	  <li class="ht-bookmarks"><a href="#">Закладки:</a>0</li>
 		      <li class="ht-busket"><a href="#">Корзина:</a> 0</li>
@@ -82,7 +82,7 @@
   	  	  	<a href="#">Инструмент</a>
   	  	  </li>
   	  	  <li>
-  	  	  	<a href="#">Перфораторы</a>
+  	  	  	Перфораторы
   	  	  </li>
   	  	</ul>
   	  </div>
@@ -94,7 +94,7 @@
 	  		<p class="filter-topic filter-style">Фильтр:</p>
 	  		<form class="filter-form" action="https://echo.htmlacademy.ru" method="post" oninput="priceouput.value=pricecount.value">
 	  	      <div class="filter-range filter-style">
-	  	    	<label class="filter-style" for="pricecount" ">Цена:</label>
+	  	    	<label class="filter-style" for="pricecount">Цена:</label>
                 <input type="range" id="pricecount" name="pricecount" min="0" max="35000" step="1000">
 			  </div>
 			  <div class="half-width filter-area">
@@ -116,11 +116,17 @@
           	  <label for="hitachy-field">Hitachi</label>
           	  <hr>
            	  <p>Питание:</p>
-		  	  <input type="radio" name="electricity" value="accumulator">
+           	  <label for="accumulator-id">
+		  	    <input type="radio" name="electricity" value="accumulator" id="accumulator-id">
           	  Аккумуляторные
-          	  <input type="radio" name="electricity" value="ac" checked>
-         	  Сетевые<br>
+          	    </label>
+          	    <label for="ac-id">
+          	  <input type="radio" name="electricity" value="ac" id="ac-id" checked>
+         	  Сетевые
+         	    </label>
+         	    <br>
    	  	  	  <a class="catalog-btn" href="#" value="Показать">
+   	  	  	  <input type="submit" name="show" value="Показать">
   	  	    </form>
 	  	</div>
 	  	<div class="catalog-all">
@@ -144,14 +150,7 @@
 			<p><del>30500 р.</del></p>
 			<div class="item-price">25500 Р.</div>
 		  </div>
-		  <div class="catalog-item-choosen catalog-item-last">
-            <div class="buy-btn">
-            	<a href="#">Купить</a>
-            </div>
-            <div class="bookmarks-btn">
-            	<a href="#">В закладки</a>
-            </div>
-            <span>new</span>
+			<img src="img/image1.png" width="50" height="50" alt="Перфоратор">
             <b>Перфоратор BOSCH BFG 2000</b>
 			<div class="item-price">15500 Р.</div>
 		  </div>
@@ -193,7 +192,7 @@
 		  </div>
 	  	</div>
 	  	<div class="page-navigation">
-	  	<a class="navigation-btn-choosen" href="#">1</a>
+	  	<span class="navigation-btn-choosen">1</span>
 	  	<a class="navigation-btn" href="#">2</a>
 	  	<a class="navigation-btn" href="#">3</a>
 	  	<a class="navigation-btn" href="#">Следующая</a>
@@ -262,7 +261,7 @@
 	      </section>
 	      <section class="footer-mail">
 		    <p>Обратная связь:</p>
-		    <a class="btn" href="https://htmlacademy.ru">mail@htmlacademy.ru</a>
+		    <a class="btn" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 	      </section>
 	      <section class="footer-copyright">
 		    <p>Разработано:</p>
