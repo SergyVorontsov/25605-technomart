@@ -1,0 +1,22 @@
+body {
+	font-family: "Cuprum", Arial, serif; /*гарнитура (название шрифта)*/
+	font-size: 13px;	/*размер шрифта*/
+	line-height: 24px;/*высоту строки*/
+	color: #202121; /*цвет шрифта*/
+	font-weight: 500;/*жирность шрифта*/
+	background-color: #ffffff; /*для видимости стилей*/
+}
+
+h1 { /*h1 нет в проекте, так как для каталога h1 выделить могу, но для главной
+	страницы тот же размер будут иметь несколько элементов h2*/
+}
+
+h2 {
+	font-family: "Cuprum", Arial, serif; 
+	font-size: 30px;
+	line-height: 30px;
+	color: #4c5a71;
+	font-weight: 500;
+}
+
+
