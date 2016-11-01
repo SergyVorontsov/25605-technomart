@@ -19,4 +19,563 @@ h2 {
 	font-weight: 500;
 }
 
+.container {
+	width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
 
+.clearfix::after{
+	content:"";
+	display: table;
+	clear: both;
+}
+
+.header-top {
+	min-height: 42px;
+	background-color: #30374a;
+}
+
+.header-top .ht-logo {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.header-top .ht-logo a {
+	display: block;
+	width: 220px;
+	height: 42px;
+	background: #cd3944 url("../img/technomart.png") no-repeat 50% 50%;
+	border-bottom: 5px solid #9c2b34;
+}
+
+.header-top .ht-navigation {
+	display: inline-block;
+	width: 540px;
+	margin-right: 10px;
+	outline: 1px solid white;
+}
+
+.ht-navigation ul {
+	list-style: none;
+}
+
+.ht-navigation li {
+	display: inline-block;
+	margin-right: 10px;
+	white-space: nowrap;
+}
+.hb-navigation li:last-child {
+	margin-left: 0px;
+}
+
+.hb-navigation a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-top .ht-contents {
+	display: inline-block;
+	width: 150px;
+	height: 42px;
+	outline: 1px solid white;
+}
+
+
+.header-bottom {
+	min-height: 279px;
+	background-color: #f1f4f6;
+	margin-bottom: 59px;
+	padding-bottom: 1px;
+}
+
+.header-bottom .hb-left {
+	float: left;
+	width: 300px;
+	min-height: 72px;
+	margin: 45px 20px 42px 0;
+	outline: 1px solid black;
+}
+
+.header-bottom .hb-center {
+	float: left;
+	width: 300px;
+	min-height: 72px;
+	margin: 45px 20px 42px 0;
+	outline: 1px solid black;
+}
+
+.header-bottom .hb-right {
+	float: left;
+	width: 300px;
+	min-height: 72px;
+	margin: 45px 0 42px 0;
+	outline: 1px solid black;
+}
+
+
+.hb-navigation {
+	background-color: #3a445b;
+	margin-bottom: 60px;
+	clear: both;
+}
+
+.hb-navigation ul {
+	height: 55px;
+	list-style: none;
+	border-bottom: 5px solid #30374a;
+}
+
+.hb-navigation li {
+	display: inline-block;
+	margin-right: 60px;
+	white-space: nowrap;
+}
+
+.hb-navigation li:first-child {
+	margin-left: 50px;
+}
+
+.hb-navigation li:last-child {
+	margin-right: 0px;
+}
+
+.hb-navigation a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.features {
+	min-height: 410px;
+	margin-bottom: 53px;
+}
+
+.features .features-item {
+	width: 300px;
+	height: 123px;
+	margin: 0 20px 20px 0;
+}
+
+.features .feature-first{
+	background-color: #e4b03d;
+	float: left;
+}
+
+.features .feature-second{
+	background-color: #72addb;
+	float: left;
+}
+
+.features .feature-third{
+	background-color: #b878cd;
+	float: left;
+	margin-right: 0px;
+}
+
+.features .feature-forth{
+	background-color: #9ed07d;
+	float: right;
+	margin-right: 0px;
+}
+
+.features .feature-fifth{
+	background-color: #e5b03d;
+	float: right;
+	margin: 0 0 0 0;
+}
+
+.features .features-item-big {
+	width: 620px;
+	height: 266px;
+	background: #e4b03d url("../img/big.jpg");
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.popular {
+	min-height: 428px;
+	margin-bottom: 20px;
+}
+
+.popular-header {
+	min-height: 90px;
+	background-color: #f5f2ec;
+	margin-bottom: 20px;
+}
+
+.popular-item {
+	display: inline-block;
+	width: 218px;
+	height: 316px;
+	margin-right: 20px;
+	border: 1px solid #e4e4e4;
+	vertical-align: top;
+}
+
+.popular-item:last-child {
+	margin-right: -40px;
+}
+
+.manufacturers {
+	min-height: 420px;
+	margin-bottom: 85px;
+}
+
+.manufacturers a {
+	display: inline-block;
+	width: 218px;
+	height: 143px;
+	margin-right:20px;
+	margin-bottom: 20px;
+	border: 1px solid #e4e4e4;
+	vertical-align: top;
+}
+
+.manufacturers a:nth-child(4n) { /*перепробовал все*/
+	margin-right: -40px;
+}
+
+.manufacturer-1 {
+	background: url("../img/bosch.png") no-repeat 50% 50%;
+}
+
+.manufacturer-2 {
+	background: url("../img/makita.png") no-repeat 50% 50%;
+}
+.manufacturer-3 {
+	background: url("../img/dewalt.png") no-repeat 50% 50%;
+}
+
+.manufacturer-4 {
+	background: url("../img/interskol.png") no-repeat 50% 50%;
+}
+
+.manufacturer-5 {
+	background: url("../img/hitachi.png") no-repeat 50% 50%;
+}
+.manufacturer-6 {
+	background: url("../img/lg.png") no-repeat 50% 50%;
+}
+
+.manufacturer-7 {
+	background: url("../img/aeg.png") no-repeat 50% 50%;
+}
+
+.manufacturer-8 {
+	background: url("../img/metabo.png") no-repeat 50% 50%;
+	}
+
+.index-content-first {
+	min-height: 522px;
+	margin-bottom: 85px;
+	background: #f3f6f8 url("../img/bus-1.png") no-repeat 50% 50%;
+}
+
+.content-services {
+	padding-top: 72px;
+	min-height: 105px;
+	margin-bottom: 63px;
+}
+
+.content-menu {
+	float: left;
+	width: 240px;
+	min-height: 285px;
+	margin-right: 80px;
+}
+
+.content-delivery{
+	float: left;
+	width: 300px;
+	min-height: 285px;
+}
+
+.index-content-second {
+	min-height: 370px;
+	margin-bottom: 86px;
+}
+
+.content-second-left {
+	float: left;
+	width:560px;
+	margin-right: 80px;
+}
+
+.content-second-right {
+	float: right;
+	width:300px;
+}
+
+.footer-top {
+	min-height: 193px;
+	background-color: #3a445b;
+}
+
+
+.footer-top .logo-address {
+	float:left;
+	width: 350px;
+	min-height: 160px;
+	outline: 1px solid white;
+}
+
+.logo-address a {
+	display: block;
+	width: 220px;
+	height: 63px;
+	background: #cd3944 url("../img/technomart.png") no-repeat 50% 50%;
+	border-bottom: 5px solid #9c2b34;
+}
+
+.footer-top .ft-nav-first {
+	float:right;
+	width: 550px;
+	min-height: 50px;
+}
+
+/*Стили горизонтальных меню футера*/
+
+.ft-nav-first ul {
+	padding: 0;
+	margin:0;
+	list-style: none;
+	text-align: right;
+}
+
+.ft-nav-first li {
+	display: inline-block;
+	margin-left: 60px;
+	white-space: nowrap;
+}
+
+.ft-nav-first li:first-child {
+	margin-left: 0px;
+}
+
+.ft-nav-first a {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+.footer-top .ft-nav-second {
+	float:right;
+	width: 540px;
+	min-height: 50px;
+}
+
+.ft-nav-second ul {
+	padding: 0;
+	margin:0;
+	list-style: none;
+	text-align: right;
+}
+
+.ft-nav-second li {
+	display: inline-block;
+	margin-left: 60px;
+	white-space: nowrap;
+	text-align: right;
+}
+
+.ft-nav-second li:first-child {
+	margin-left: 0px;
+}
+
+.ft-nav-second a {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*Разобраться со стилями*/
+
+.footer-bottom {
+	min-height: 107px;
+	background-color: #31374a;
+}
+
+
+.footer-info {
+	float:left;
+	width: 320px;
+	margin-right: 70px;
+}
+
+.footer-social {
+	float:left;
+	width: 170px;
+	margin-right: 80px;
+}
+
+.footer-social .social-btn{
+	display: inline-block;
+	width: 41px;
+	height:41px;
+	margin-right: 6px;
+	border-radius: 50%;
+	background-color: #282e3c;
+}
+
+.footer-social .social-btn-vk{
+	background: #282e3c url("../img/vk.png") no-repeat 50% 50%;
+}
+
+.footer-social .social-btn-fb{
+	background: #282e3c url("../img/facebook.png") no-repeat 50% 50%;
+}
+
+.footer-social .social-btn-inst{
+	background: #282e3c url("../img/insta.png") no-repeat 50% 50%;
+}
+
+
+.footer-mail {
+	float: left;
+	width: 140px;
+}
+
+.footer-copyright {
+	float:right;
+	width: 140px;
+}
+
+
+
+
+/*Стили для catalog.html*/
+
+.header .hb-catalog{
+	margin-bottom: 22px;
+}
+
+.breadcrumbs {
+	margin-bottom: 21px;
+}
+
+.breadcrumbs ul {
+	padding: 0;
+	margin:0;
+	list-style: none;
+}
+
+.breadcrumbs li {
+	display: inline-block;
+	margin-right: 31px;
+	white-space: nowrap;
+}
+
+.breadcrumbs li:nth-child(3) {
+	margin-right: 43px;
+}
+
+.breadcrumbs a {
+	color: black;
+	text-decoration: none;
+}
+
+.content-name{
+	min-height: 90px;
+	background-color: #f3f6f8;
+	margin-bottom: 20px;
+}
+
+
+.catalog-content .filter-form {
+	float: left;
+	width: 220px;
+	min-height: 750px;
+	margin-right: 20px;
+}
+
+.catalog-content .catalog-all {
+	float: left;
+	width: 700px;
+	min-height: 1055px;
+	margin-bottom: 50px;
+	outline: 1px solid black;
+}
+
+.catalog-item {
+	display: inline-block;
+	width: 218px;
+	height: 316px;
+	margin-right:20px;
+	margin-bottom: 20px;
+	border: 1px solid #e4e4e4;
+	vertical-align: top;
+}
+
+.catalog-item:nth-child(3n){ /*не влазит, все попробовал*/
+	margin-right: -10px;
+}
+
+.catalog-content .filter-style {
+	padding-left: 19px;
+	background-color: #f5f2ec;
+}
+
+.catalog-filter {
+	width: 700px; 
+	min-height: 38px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.catalog-filter  ul {
+	display: inline-block;
+	padding: 0;
+	margin:0;
+	list-style: none;
+}
+
+.catalog-filter  li {
+	display: inline-block;
+	margin-right: 65px;
+	white-space: nowrap;
+}
+
+.catalog-filter span{
+	margin-right: 140px;
+}
+
+.catalog-filter li:last-child{
+	margin-right: 0px;
+}
+
+.catalog-filter a {
+	color: black;
+	text-decoration: none;
+}
+
+.paginator {
+	clear:both;
+	margin-left:240px;
+	width: 350px;
+	height:38px;
+	margin-bottom: 60px;
+}
+
+.paginator a{
+	display: inline-block;
+	margin-right:10px;
+	min-width: 38px;
+	height: 38px;
+	background-color: white;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid #e4e4e4;
+	text-decoration: none;
+}
+
+.paginator a:last-child{
+	padding: 0 31px;
+}
+
+.item-content {
+	min-height: 191px; /*с учетом паддинга -топ*/
+	background-color: #f3f6f8;
+	padding-top: 70px;
+}
