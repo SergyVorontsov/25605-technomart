@@ -39,6 +39,7 @@ h2 {
 .header-top .ht-logo {
 	display: inline-block;
 	margin-right: 10px;
+	vertical-align: top;
 }
 
 .header-top .ht-logo a {
@@ -64,6 +65,7 @@ h2 {
 	display: inline-block;
 	margin-right: 10px;
 	white-space: nowrap;
+	vertical-align: top;
 }
 .hb-navigation li:last-child {
 	margin-left: 0px;
@@ -130,6 +132,7 @@ h2 {
 	display: inline-block;
 	margin-right: 60px;
 	white-space: nowrap;
+	vertical-align: top;
 }
 
 .hb-navigation li:first-child {
@@ -195,12 +198,18 @@ h2 {
 .popular {
 	min-height: 428px;
 	margin-bottom: 20px;
+	font-size: 0;  /*нулевой размер у родителя - не получилась плитка*/
+}
+
+.popular-header h2 {
+	font-size: 30px;
 }
 
 .popular-header {
 	min-height: 90px;
 	background-color: #f5f2ec;
 	margin-bottom: 20px;
+	font-size: 13px;
 }
 
 .popular-item {
@@ -210,15 +219,22 @@ h2 {
 	margin-right: 20px;
 	border: 1px solid #e4e4e4;
 	vertical-align: top;
+	font-size: 13px;
 }
 
+/*
 .popular-item:last-child {
 	margin-right: -40px;
 }
+*/
 
 .manufacturers {
 	min-height: 420px;
 	margin-bottom: 85px;
+}
+
+.manufacturers .name-list {
+	font-size: 0; /*нулевой размер у родителя - получилось*/
 }
 
 .manufacturers a {
@@ -346,6 +362,7 @@ h2 {
 	display: inline-block;
 	margin-left: 60px;
 	white-space: nowrap;
+	vertical-align: top;
 }
 
 .ft-nav-first li:first-child {
@@ -377,6 +394,7 @@ h2 {
 	margin-left: 60px;
 	white-space: nowrap;
 	text-align: right;
+	vertical-align: top;
 }
 
 .ft-nav-second li:first-child {
@@ -416,6 +434,7 @@ h2 {
 	margin-right: 6px;
 	border-radius: 50%;
 	background-color: #282e3c;
+	vertical-align: top;
 }
 
 .footer-social .social-btn-vk{
@@ -464,6 +483,7 @@ h2 {
 	display: inline-block;
 	margin-right: 31px;
 	white-space: nowrap;
+	vertical-align: top;
 }
 
 .breadcrumbs li:nth-child(3) {
@@ -497,19 +517,28 @@ h2 {
 	outline: 1px solid black;
 }
 
+.catalog-all .item-list {
+	font-size: 0; /* нулевой размер шрифта у родителя - плитка не получается*/
+} 
+
 .catalog-item {
 	display: inline-block;
-	width: 218px;
-	height: 316px;
+	width: 220px;
+	height: 319px;
 	margin-right:20px;
 	margin-bottom: 20px;
 	border: 1px solid #e4e4e4;
 	vertical-align: top;
+	font-size: 13px;
 }
 
-.catalog-item:nth-child(3n){ /*не влазит, все попробовал*/
+
+/*
+.catalog-item:nth-child(3n){ /*не влазит, все попробовал
 	margin-right: -10px;
 }
+
+*/
 
 .catalog-content .filter-style {
 	padding-left: 19px;
@@ -528,12 +557,14 @@ h2 {
 	padding: 0;
 	margin:0;
 	list-style: none;
+	vertical-align: top;
 }
 
 .catalog-filter  li {
 	display: inline-block;
 	margin-right: 65px;
 	white-space: nowrap;
+	vertical-align: top;
 }
 
 .catalog-filter span{
