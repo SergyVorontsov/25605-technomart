@@ -222,11 +222,10 @@ h2 {
 	font-size: 13px;
 }
 
-/*
 .popular-item:last-child {
-	margin-right: -40px;
+	margin-right: 0px;
 }
-*/
+
 
 .manufacturers {
 	min-height: 420px;
@@ -247,8 +246,8 @@ h2 {
 	vertical-align: top;
 }
 
-.manufacturers a:nth-child(4n) { /*перепробовал все*/
-	margin-right: -40px;
+.manufacturers a:nth-child(4n) { 
+	margin-right: 0px;
 }
 
 .manufacturer-1 {
@@ -533,12 +532,10 @@ h2 {
 }
 
 
-/*
-.catalog-item:nth-child(3n){ /*не влазит, все попробовал
-	margin-right: -10px;
+.catalog-item:nth-child(3n) {
+	margin-right: 0px;
 }
 
-*/
 
 .catalog-content .filter-style {
 	padding-left: 19px;
