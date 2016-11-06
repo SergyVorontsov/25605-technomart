@@ -214,10 +214,10 @@ h2 {
 
 .popular-item {
 	display: inline-block;
-	width: 218px;
-	height: 316px;
+	width: 220px;
+	height: 318px;
 	margin-right: 20px;
-	border: 1px solid #e4e4e4;
+	outline: 1px solid #e4e4e4;
 	vertical-align: top;
 	font-size: 13px;
 }
@@ -238,11 +238,11 @@ h2 {
 
 .manufacturers a {
 	display: inline-block;
-	width: 218px;
-	height: 143px;
+	width: 220px;
+	height: 145px;
 	margin-right:20px;
 	margin-bottom: 20px;
-	border: 1px solid #e4e4e4;
+	outline: 1px solid #e4e4e4;
 	vertical-align: top;
 }
 
@@ -512,8 +512,7 @@ h2 {
 	float: left;
 	width: 700px;
 	min-height: 1055px;
-	margin-bottom: 50px;
-	outline: 1px solid black;
+	margin-bottom: 34px; /*с учетом margin-bottom для нижнего ряда*/
 }
 
 .catalog-all .item-list {
@@ -523,10 +522,10 @@ h2 {
 .catalog-item {
 	display: inline-block;
 	width: 220px;
-	height: 319px;
+	height: 318px;
 	margin-right:20px;
 	margin-bottom: 20px;
-	border: 1px solid #e4e4e4;
+	outline: 1px solid black;
 	vertical-align: top;
 	font-size: 13px;
 }
