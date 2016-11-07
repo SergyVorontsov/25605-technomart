@@ -7,10 +7,10 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
 	    <div class="header-top">
+	    <div class="container">
 	      <div class="ht-logo">
-	  	   	<a href="#" style="background-color: #ee3643;"><img src="img/technomart.png" width="110" height="18" alt="Техномарт"></a> <!--Для демонстрации шрифта шильдика-->
+	  	   	<a href="#"></a> <!--Для демонстрации шрифта шильдика-->
 	      </div>
 	  	  <div class="ht-navigation">
             <ul>
@@ -28,23 +28,26 @@
 	      <div class="ht-contents">
      	     <a class="contents" href="#">Оформить заказ</a>
 	      </div>
+	     </div>
 	    </div>
-        <div class="header-bottom">
-		  <div class="hb-left">
+	    <div class="header-bottom">
+	      <div class="container">
+		  	<div class="hb-left">
 		  Интернет-магазин</br>
 		  строительных материалов</br>
 		  и инструментов для ремонта
-		  </div>
-		<div class="hb-center">
+		  	</div>
+			<div class="hb-center">
 		  <p class="hb-tel">+7 (812) 555-05-55</p>
 		  <p class="hb-location">г. Санкт-Петербург, ул. Б.Конюшенка, д.19/8</p>
-		</div>
-		<div class="hb-right">
+			</div>
+			<div class="hb-right">
 		  <div class="exit">
 		  	<a class="login-btn" href="#">Войти</a>
 		  </div>
 		  <a class="registration-btn" href="#">Регистрация</a>
 		</div>
+
 		<nav class="hb-navigation">
 		  <ul>
 			<li>
@@ -71,9 +74,11 @@
 	      </ul>
 		</nav>
       </div>
+      </div>
     </header>
-	<main class="container">
-	  <section class="features">
+	<main>
+	<div class="container">
+	  <section class="features clearfix">
     	<div class="features-item feature-first">
 		  <b>Материалы</b>
 		  <a class="features-btn" href="#">На любой вкус</a>
@@ -128,6 +133,7 @@
 		  <b>Перфоратор BOSCH BFG 2000</b>
 		  <span>new</span>
 		  <div class="item-price">12500 Р.</div>
+		
 		</div>
 	  </section> 
 	  <section class="manufacturers">
@@ -135,16 +141,20 @@
 		  <h2>Популярные производители:</h2>
 		  <a class="red-btn" href="#">Все производители</a>
 		</div>
-		  <a href="#"><img src="img/bosch.png" width="126" height="37" alt="Bosch"></a>
-		  <a href="#"><img src="img/makita.png" width="123" height="40" alt="Makita"></a>
-		  <a href="#"><img src="img/dewalt.png" width="146" height="44" alt="Dewalt"></a>
-		  <a href="#"><img src="img/interskol.png" width="200" height="88" alt="Interskol"></a>
-		  <a href="#"><img src="img/hitachi.png" width="169" height="31" alt="Hitachi"></a>
-		  <a href="#"><img src="img/lg.png" width="121" height="73" alt="LG"></a>
-		  <a href="#"><img src="img/aeg.png" width="151" height="96" alt="AEG"></a>
-		  <a href="#"><img src="img/metabo.png" width="204" height="69" alt="Metabo"></a>
+		<div class="name-list">
+		  <a href="#" class="manufacturer-1"></a>
+		  <a href="#" class="manufacturer-2"></a>
+		  <a href="#" class="manufacturer-3"></a>
+		  <a href="#" class="manufacturer-4"></a>
+		  <a href="#" class="manufacturer-5"></a>
+		  <a href="#" class="manufacturer-6"></a>
+		  <a href="#" class="manufacturer-7"></a>
+		  <a href="#" class="manufacturer-8"></a>
+		  </div>
 	  </section>
-	  <div class="index-content-first">
+	</div>
+	<div class="index-content-first">
+	  	<div class="container clearfix">
 		<div class="content-services">
 		  <h2>Сервисы</h2>
 		  <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
@@ -170,8 +180,9 @@
 		  Ведь мы неплохо заработает,<br>
 		  поднимая это на ваш этаж!</p>
 	    </div>
+	    </div>
 	  </div>
-	  <div class="index-content-second">
+	  <div class="index-content-second container clearfix">
 		<div class="content-second-left">
 		  <h2>Компания "Техномарт"</h2>
 		  <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодущными любителей сэкономить на гастарбайтерах.</p>
@@ -192,16 +203,15 @@
 	  </div> 
     </main>
 	<footer class="footer">
-	  <div class="container">
 	    <div class="footer-top">
-	      <div class="ft-logo">
-	        <a href="#" style="background-color: #ee3643;">
-	        <img src="img/technomart.png" width="110" height="18" alt="Техномарт"></a>
-	      </div>
- 	  	  <section class="footer-contacts">
-	      г. Санкт-Петербург, ул. Б.Конюшенка, д.19/8<br>
-	      +7 (812) 555-05-55
-	      </section>
+	     <div class="container">
+	      <div class="logo-address">
+	        <a href="#"></a>
+	      	<section>
+	      	г. Санкт-Петербург, ул. Б.Конюшенка, д.19/8<br>
+	      	+7 (812) 555-05-55
+	      	</section>
+		  </div>
 	      <nav class="ft-nav-first">
 		    <ul>
 		      <li>
@@ -238,15 +248,17 @@
 		    </ul>
 	      </nav> 
 	    </div>
+	    </div>
 	    <div class="footer-bottom">
+		 <div class="container clearfix">
 	      <section class="footer-info">
 	      2010-2016 Компания "Техномарт"<br>
 	      Все права защищены
 	      </section>
 	      <section class="footer-social">
-		    <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-		    <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-	        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+		    <a class="social-btn social-btn-vk" href="#"></a>
+		    <a class="social-btn social-btn-fb" href="#"></a>
+	        <a class="social-btn social-btn-inst" href="#"></a>
 	      </section>
 	      <section class="footer-mail">
 		    <p>Обратная связь:</p>
@@ -256,8 +268,8 @@
 		    <p>Разработано:</p>
 		    <a class="btn" href="https://htmlacademy.ru">htmlacademy.ru</a>
 	      </section>
-	    </div>
-	  </div>  
+	     </div>
+	    </div> 
     </footer>
   </body>
 </html>
