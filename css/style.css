@@ -94,14 +94,15 @@ h2 {
 }
 
 .ht-search input {
-	margin-top: 10px;
-	margin-left: 48px;
-	width: 200px;
+	width: 100%;
+	padding: 12px 49px;
 	vertical-align: middle;
 	font: inherit;
+	font-size: 17px;
 	color: #ffffff;
 	border: none;
 	background-color: inherit;
+	box-sizing: border-box;
 }
 
 .ht-search::before {
@@ -114,6 +115,16 @@ h2 {
   height: 17px;
   background: transparent url("../img/icon-search.png") no-repeat;
   opacity: 0.3;
+}
+
+.ht-search input:focus {
+	border: none;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.ht-search input:focus::before { /*Не удалось*/
+	background: transparent url("../img/icon-search-act.png") no-repeat;
 }
 
 
@@ -431,15 +442,28 @@ h2 {
 .feature-fifth a {
 	display: inline-block;
 	margin-left: 25px;
-	padding: 12px 24px;
-	font-size: 14px;
-	line-height: 18px;
+	height: 38px;
+	width: 135px;
+	line-height: 38px;
+	text-align: center;
 	color: #ffffff;
 	text-decoration: none;
 	background-color: rgba(205, 158, 55, 0.7);
 	border-radius: 3px 3px;
 	text-transform: uppercase;
+	cursor: pointer;
 }
+
+.features-item a:hover {
+	background-color: #000000;
+	opacity: 0.2;
+}
+
+.features-item a:active {
+	background-color: #000000;
+	opacity: 0.3;
+}
+
 
 .features .feature-second{
 	background: #72addb url("../img/drel.png") no-repeat 197px 33px;
@@ -505,6 +529,7 @@ h2 {
 	display: block;
 	margin: 0;
 	margin-left: 24px;
+	font-family: "PT Sans", "Arial", sans-serif;
 	padding: 0;
 	font-size: 18px;
 	line-height: 24px;
@@ -1440,12 +1465,13 @@ h2 {
 	min-height: 38px;
 	margin:0;
 	padding-left: 19px;
-	font-size: 13px;
-	line-height: 38px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
 	padding-bottom: 1px;
 	background-color: #f5f2ec;
+	font-size: 13px;
+	line-height: 38px;
+	font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .catalog-content h3 {
@@ -1486,7 +1512,6 @@ input[type="checkbox"] +label {
 	line-height: 22px;
 	padding-left: 35px;
 	cursor: pointer; 
-	outline: 1px solid red;
 }
 
 input[type="checkbox"] + label::before {
@@ -1512,62 +1537,68 @@ input[type="checkbox"]:checked + label::after {
 }
 
 
-/* Неясно, как задать селекторы
 input[type="radio"] {
 	display:none;
 }
 
 
- {
+input[type="radio"] +label{
 	position: relative;
 	display: block;
 	margin-bottom: 15px;
 	line-height: 22px;
 	padding-left: 35px;
 	cursor: pointer; 
-	outline: 1px solid red;
 }
 
-.radio label::before {
+input[type="radio"] + label::before {
 	content: "";
 	display: block;
-	width: 16px;
-	height: 16px;
-	border: 4px solid #c0c0c0;
+	width: 17px;
+	height: 17px;
+	border: 4px solid #bfbfbf;
 	border-radius: 50%;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-input[type="radio"]:checked label::after { /*селектор как??
+input[type="radio"]:checked + label::after { 
 	content: "";
-	width: 18px;
-	height: 18px;
-	background-color: black;
+	display: block;
+	width: 9px;
+	height: 9px;
+	background-color: #bfbfbf;
 	border-radius: 50%;
 	position: absolute;
-	width: 10px;
-	height: 10px;
-	top: 4px;
-	left: 4px;
+	top: 8px;
+	left: 8px;
 
-	*/
+}
 
 .filter-form .btn {
+	margin-top: 20px;
 	display: inline-block;
-  	padding: 11px 39px;
+	width: 138px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
   	font-weight: 700;
   	font-size: 13px;
-  	line-height: 18px;
   	font-family: "PT Sans", "Arial", sans-serif;
   	color: #000000;
   	text-transform: uppercase;
-  	text-decoration: none;
   	background-color: #ffffff;
   	cursor: pointer;
   	border: 1px solid #e4e4e4;
   	border-radius: 3px;
+}
+
+.filter-form .btn:hover,
+.filter-form .btn:active {
+	color: #ffffff;
+	background-color: #cd3944;
+
 }
 
 .catalog-all {
@@ -1595,9 +1626,33 @@ input[type="radio"]:checked label::after { /*селектор как??
 }
 
 .all-filter  li {
+	position: relative;
 	display: inline-block;
 	vertical-align: top;
 	font-size: 0px;
+}
+
+.all-filter  li:last-child::before {
+	content: "";
+	display: block;
+	width: 11px;
+	height: 9px;
+	background: url("../img/icon-up-dir.png") no-repeat;
+	position: absolute;
+	top: 14px;
+    right: 10px;
+}
+
+.all-filter  li:last-child::after {
+	content: "";
+	display: block;
+	width: 11px;
+	height: 9px;
+	background: url("../img/icon-up-dir.png") no-repeat;
+	position: absolute;
+	top: 14px;
+    right: -23px;
+    transform: rotate(180deg);
 }
 
 .all-filter span{
@@ -1620,13 +1675,18 @@ input[type="radio"]:checked label::after { /*селектор как??
 	color: #c1bfba;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin-right: 62px;
+	margin-right: 58px;
 	border-bottom: 1px dashed #cd3944;
 }
 
-.all-filter a:hover,
-.all-filter a:active{
-	color: #cd3944;
+.all-filter a:hover{
+	color: #000000;
+	border-bottom: 1px solid #000000;
+}
+
+.all-filter .catalog-filter-act {
+	color: #ce3945;
+	border: 0;
 }
 
 .catalog-all .item-list {
