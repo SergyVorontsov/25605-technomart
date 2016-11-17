@@ -3,7 +3,7 @@
   <head>
 	<meta charset="utf-8">
 	<title>"Техномарт"!</title>
-	<link href="css/style3.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
@@ -11,7 +11,7 @@
     <header class="header">
 	  <div class="header-top">
 	    <div class="container">
-	 	  <a class="ht-logo" href="index.html">
+	 	  <a class="ht-logo">
 	 	  	<img src="img/technomart.png" width="110" height="18" alt="Теномарт">
 	  	  </a> 
 	  	  <div class="ht-navigation">
@@ -36,8 +36,8 @@
 	  <div class="header-bottom">
 	    <div class="container">
 	   	  <div class="hb-left">
-		  Интернет-магазин</br>
-		  строительных материалов</br>
+		  Интернет-магазин<br>
+		  строительных материалов<br>
 		  и инструментов для ремонта
 		  </div>
 		  <div class="hb-center">
@@ -51,13 +51,13 @@
 		  <nav class="hb-navigation">
 		    <ul>
 			  <li>
-			    <a href="#">Главная</a>
+			    <a>Главная</a>
 			  </li>
 			  <li>
 			    <a href="#">Компания</a>
 			  </li>
 			  <li>
-			    <a href="#">Каталог</a>
+			    <a href="catalog.html">Каталог</a>
 			  </li>
 			  <li>
 			    <a href="#">Новости</a>
@@ -92,13 +92,24 @@
 		    <b>Техника</b>
 		    <a class="features-btn" href="#">Для стройки</a>
 		  </div>
-		  <div class="features-item-big feature-big">
-		    <b>Перфораторы</b>
-		    <p>Настоящие мужские игрушки</p>
-		    <a class="main-btn" href="#">Открыть каталог</a>
-		    <div class="slider-controls">
-				<i class="active"></i>
-				<i></i>
+		  <div class="features-item-big">
+		  	<input type="radio" id="btn-1" name="toggle">
+        	<input type="radio" id="btn-2" name="toggle" checked>
+		  	<div class="slider-controls">
+				<label for="btn-1"></label>
+          		<label for="btn-2"></label>
+		    </div>
+		  	<div class="slides">
+			  <div class="slide">
+		    	<b>Перфораторы</b>
+		    	<p>Настоящие мужские игрушки</p>
+		    	<a class="main-btn" href="#">Открыть каталог</a>
+		      </div>
+		      <div class="slide">
+		    	<b>Дрели</b>
+		    	<p>Соседям на радость!</p>
+		    	<a class="main-btn" href="#">Открыть каталог</a>
+		      </div>
 		    </div>
 		  </div>
 		  <div class="features-item feature-forth">
@@ -189,24 +200,41 @@
 		    Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 		  </div>
 	      <div class="content-menu">
-		    <ul>
-		      <li class="active">
-		        <a>Доставка</a>
-		      </li>
-		      <li>
-		        <a href="#">Гарантия</a>
-		      </li>
-		      <li>
-			    <a href="#">Кредит</a>
-		      </li>
-		    </ul>
-	      </div>
- 	      <div class="content-delivery">
-		    <h2>Доставка</h2>
-		    <p>Мы с удовольствием доставим ваш товар прямо<br>
-		    к Вашему подъезду совершенно бесплатно!<br>
-		    Ведь мы неплохо заработает,<br>
-		    поднимая это на ваш этаж!</p>
+		      <input type="radio" id="point-1" name="toggl">
+		      <div class="font-1"></div>
+		      <input type="radio" id="point-2" name="toggl" checked>
+		      <div class="font-2"></div>
+		      <input type="radio" id="point-3" name="toggl">
+		      <div class="font-3"></div>
+			  <div class="menu">
+			  	<label for="point-1">Доставка</label>
+			  	<label for="point-2">Гарантия</label>
+			  	<label for="point-3">Кредит</label>
+			  </div>
+	  			
+ 	      	  <div class="content-indeed">
+ 	      	    <div class="point">
+		          <h2>Доставка</h2>
+		          <p>Мы с удовольствием доставим ваш товар прямо<br>
+		          к Вашему подъезду совершенно бесплатно!<br>
+		          Ведь мы неплохо заработает,<br>
+		          поднимая это на ваш этаж!</p>
+		        </div>
+		        <div class="point">
+		          <h2>Гарантия</h2>
+		          <p>Если купленный у нас товар поломается или заискрит,<br>
+		          а также в случае пожара, спровоцированного его возгоранием,<br>
+		          вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+		          сгоревший товар на новый.<br>
+		          Дом уж восстановите как-нибудь сами</p>
+		        </div>
+		        <div class="point">
+		          <h2>Кредит</h2>
+		          <p>Залезть в долговую яму стало проще!<br>
+		          Кредитные консультанты придут вам на помощь.</p>
+		          <a class="btn" href="">Отправить заявку</a>
+		        </div>
+		      </div>
 	      </div>
 	    </div>
 	  </div>
@@ -250,7 +278,7 @@
 			    <a href="#">Новости</a>
 		      </li>
 		      <li>
-			    <a href="#">Каталог</a>
+			    <a href="catalog.html">Каталог</a>
 		      </li>
 		      <li>
 			    <a href="#">Доставка</a>
@@ -281,7 +309,7 @@
 	  <div class="footer-bottom">
 	    <div class="container clearfix">
 	      <section class="footer-info">
-	      &#169 2010-2016 Компания «Техномарт»<br>
+	      &#169; 2010-2016 Компания «Техномарт»<br>
 	      Все права защищены
 	      </section>
 	      <section class="footer-social">
@@ -304,16 +332,21 @@
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       	<label class="user-name half-width">Ваше имя:
-        	<input type="text" name="name" placeholder="Представтесь, пожалуйста">
-        </label>
+          <input type="text" name="name" placeholder="Представтесь, пожалуйста">
+          </label>
         <label class="user-mail half-width">Ваш e-mail:
-        	<input type="text" name="mail" placeholder="Для отправки ответа">
+          <input type="text" name="mail" placeholder="Для отправки ответа">
         </label>
         <label class="full-width">Текст письма:
-        	<textarea name="comment" id="comment-field" rows="5" cols="77">В свободной форме</textarea>
+          <textarea name="comment" id="comment-field" rows="5" cols="65">В свободной форме</textarea>
         </label>
         <button class="btn" type="submit">Отправить</button>
       </form>
   	</div>
+  	<div class="modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <div id="yandex-map"></div>
+    </div>
+    <div class="modal-overlay"></div>
   </body>
 </html>

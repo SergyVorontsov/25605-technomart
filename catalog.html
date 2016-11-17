@@ -3,7 +3,7 @@
   <head>
 	<meta charset="utf-8">
 	<title>"Техномарт"!</title>
-	<link href="css/style3.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
@@ -36,8 +36,8 @@
       <div class="header-bottom catalog">
 	    <div class="container">
 	      <div class="hb-left">
-		  Интернет-магазин</br>
-		  строительных материалов</br>
+		  Интернет-магазин<br>
+		  строительных материалов<br>
 		  и инструментов для ремонта
 		  </div>
 		  <div class="hb-center">
@@ -45,20 +45,24 @@
 		  	<p class="hb-location">г. Санкт-Петербург, ул. Б. Конюшенка, д.19/8</p>
 		  </div>
 		  <div class="hb-right catalog-page">
-		  	<a class="my-account" href="#">Равшан Джаймутович</a>
+		  	<div class="my-account">
+		  	  <a class="account" href="#">Равшан Джаймутович</a>
+		  	  <a class="link-profile" href="##"></a>
+		  	  <a class="link-deauto" href="###"></a>
+		  	</div>
 		  	<a class="my-accounts" href="#">Мои заказы</a>
 		  	<a class="my-cabinet" href="#">Личный кабинет</a>
 		  </div>
 		  <nav class="hb-navigation">
 		    <ul>
 			  <li>
-			    <a href="#">Главная</a>
+			    <a href="index.html">Главная</a>
 			  </li>
 			  <li>
 			    <a href="#">Компания</a>
 			  </li>
 			  <li>
-			    <a href="#">Каталог</a>
+			    <a>Каталог</a>
 			  </li>
 			  <li>
 			    <a href="#">Новости</a>
@@ -113,14 +117,13 @@
 	  	 			<label class="min-price"><input type="text" name="min-price" value="0"></label>
         			<label class="max-price"><input type="text" name="max-price" value="30000"></label>
 	  	      	</div>
-	  	      </div>
-			 <!--Пока не знаю, как сделать ползунок с двумя переменными-->		
+	  	      </div>	
 	  		  <hr>
   	  	  	  <h3 class="second-point">Производители:</h3>
   	  	  	  <ul>
   	  	  	  	<li>
 		  	  	  <input type="checkbox" name="bosch" id="bosch-field" checked>
-          	      <label for="bbosch-field">Bosch</label>
+          	      <label for="bosch-field">Bosch</label>
           	  	</li>
           	  	<li>
           	      <input type="checkbox" name="interskol" id="interskol-field">
@@ -348,7 +351,7 @@
 	  <div class="footer-bottom">
 	    <div class="container clearfix">
 	      <section class="footer-info">
-	      &#169 2010-2016 Компания «Техномарт»<br>
+	      &#169; 2010-2016 Компания «Техномарт»<br>
 	      Все права защищены
 	      </section>
 	      <section class="footer-social">
@@ -367,5 +370,12 @@
 	    </div>
 	  </div> 
     </footer>
+    <div class="add-to-cart container clearfix">
+      <button class="add-to-cart-close" type="button" title="Закрыть">Закрыть</button>
+      <span></span>
+      <p>Товар добавлен в корзину!</p>
+      <a class="btn">Оформить заказ</a>       
+      <button class="btn go-on" type="submit">Продолжить покупки</button>
+  	</div>
   </body>
 </html>
