@@ -253,8 +253,8 @@
 		  <h2>Контакты</h2>
 		  <p>Вы можете забрать товар сами,<br>
 		  заехав в наш офис:</p>
-		  <a href=""><img src="img/map.jpg" width="300" height="158" alt="Карта"></a>
-		  <a class="main-btn" href="#">Заблудились? Напишите нам!</a>
+		  <a class="openmap" href=""><img src="img/map.jpg" width="300" height="158" alt="Карта"></a>
+		  <a class="main-btn feedback-btn" href="#">Заблудились? Напишите нам!</a>
 		</div> 
 	  </div> 
     </main>
@@ -343,9 +343,83 @@
       </form>
   	</div>
   	<div class="modal-content-map">
-      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <button class="map-close" type="button" title="Закрыть">Закрыть</button>
       <div id="yandex-map"></div>
     </div>
     <div class="modal-overlay"></div>
+
+	<script>
+		var feedbackform = document.querySelector(".feedback-btn");
+		var popup = document.querySelector(".modal-content"); 
+		var closeform = document.querySelector(".modal-content-close");
+		var form = popup.querySelector("form");
+		var name = popup.querySelector("[name=name]");
+		var mail = popup.querySelector("[name=mail]");
+		var comment = popup.querySelector("[name=comment]");
+		var storage = localStorage.getItem("name");
+		
+
+		var mapbutton = document.querySelector(".openmap");
+		var map = document.querySelector(".modal-content-map");
+		var closemap = document.querySelector(".map-close");
+
+		feedbackform.addEventListener("click", function(event) {
+			event.preventDefault();
+			popup.classList.add("modal-content-show");
+			if(storage) {
+				name.value = storage;
+				mail.focus();
+			} else {
+				name.focus();
+			}
+		});
+
+		closeform.addEventListener("click", function(event) {
+			event.preventDefault();
+			popup.classList.remove("modal-content-show");
+			popup.classList.remove("modal-error");
+		});
+
+		form.addEventListener("submit", function(event) {
+			if (!name.value || !mail.value || !comment.value) {
+			event.preventDefault();
+			popup.classList.remove("modal-error");
+          	popup.offsetWidth = popup.offsetWidth;
+			popup.classList.add("modal-error");
+			} 
+			else {
+				localStorage.setItem("name", name.value);
+			} 
+		});
+
+		window.addEventListener("keydown", function(event) {
+			if (event.keyCode == 27) {
+				if (popup.classList.contains("modal-content-show")) {
+				popup.classList.remove("modal-content-show");
+				popup.classList.remove("modal-error");
+				}
+			}
+
+		});
+
+		mapbutton.addEventListener("click", function(event) {
+			event.preventDefault();
+			map.classList.add("modal-content-map-show");
+		});
+
+		closemap.addEventListener("click", function(event) {
+			event.preventDefault();
+			map.classList.remove("modal-content-map-show");
+		});
+
+		window.addEventListener("keydown", function(event) {
+			if (event.keyCode === 27) {
+				if (map.classList.contains("modal-content-map-show")) {
+				map.classList.remove("modal-content-map-show");
+				}
+			}
+		});
+	</script>
+	<script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=vYNqRQNbeDPjOK9BEYseL41phqefEYxU&amp;width=940&amp;height=446&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex-map"></script>
   </body>
 </html>

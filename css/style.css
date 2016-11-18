@@ -2172,6 +2172,15 @@ input[type="radio"]:checked + label::after {
 	z-index: 1000;
 }
 
+.modal-content-show {
+	display: block;
+	animation: bounce 0.6s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
 .add-to-cart {
 	display: none;
 	position: fixed;
@@ -2189,6 +2198,10 @@ input[type="radio"]:checked + label::after {
 	background-color: #ffffff;
 	box-sizing: border-box;
 	z-index: 1000;
+}
+
+.add-to-cart-show {
+	display: block;
 }
 
 .add-to-cart p {
@@ -2223,7 +2236,8 @@ input[type="radio"]:checked + label::after {
 }
 
 .modal-content-close,
-.add-to-cart-close
+.add-to-cart-close,
+.map-close
  {
   	position: absolute;
   	top: 9px;
@@ -2241,7 +2255,9 @@ input[type="radio"]:checked + label::after {
 .modal-content-close::before,
 .modal-content-close::after,
 .add-to-cart-close::before,
-.add-to-cart-close::after {
+.add-to-cart-close::after,
+.map-close::before,
+.map-close::after {
   	content: "";
   	position: absolute;
   	top: 6px;
@@ -2254,12 +2270,14 @@ input[type="radio"]:checked + label::after {
 }
 
 .modal-content-close::before,
-.add-to-cart-close::before {
+.add-to-cart-close::before,
+.map-close::before {
   	transform: rotate(45deg);
 }
 
 .modal-content-close::after,
-.add-to-cart-close::after {
+.add-to-cart-close::after,
+.map-close::after {
   	transform: rotate(-45deg);
 }
 
@@ -2301,6 +2319,7 @@ input[type="radio"]:checked + label::after {
   	text-align: center;
   	color: #ffffff;
   	text-transform: uppercase;
+  	text-decoration: none;
   	text-align: center;
   	vertical-align: top;
   	margin-right: 20px;
@@ -2395,6 +2414,10 @@ input[type="radio"]:checked + label::after {
   	z-index: 1003;
 }
 
+.modal-content-map-show {
+	display: block;
+}
+
 .modal-overlay {
   	position: fixed;
   	top: 0;
@@ -2406,6 +2429,19 @@ input[type="radio"]:checked + label::after {
 
   	background: rgba(0, 0, 0, 0.5);
   	z-index: 200;
+}
+
+@keyframes bounce {
+	0% { transform: translateX(-2000px); }
+	70% { transform: translateX(30px); }
+	90% { transform: translateX(-10px); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes shake {
+	0%, 100% { transform: translateX(0); }
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+	20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
 
 */

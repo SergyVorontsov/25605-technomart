@@ -374,8 +374,33 @@
       <button class="add-to-cart-close" type="button" title="Закрыть">Закрыть</button>
       <span></span>
       <p>Товар добавлен в корзину!</p>
-      <a class="btn">Оформить заказ</a>       
+      <a class="btn" href="">Оформить заказ</a>       
       <button class="btn go-on" type="submit">Продолжить покупки</button>
   	</div>
+  	<script>
+  		var buybut = document.querySelector(".buy"); <!--Не работает querySelectorAll-->
+		var popupcatalog = document.querySelector(".add-to-cart");
+		var closebform = document.querySelector(".add-to-cart-close");
+
+		buybut.addEventListener("click", function(event) {
+			event.preventDefault();
+			popupcatalog.classList.add("add-to-cart-show");
+		});
+
+		closebform.addEventListener("click", function(event) {
+			event.preventDefault();
+			popupcatalog.classList.remove("add-to-cart-show");
+		});
+
+		window.addEventListener("keydown", function(event) {
+			if (event.keyCode == 27) {
+				if (popupcatalog.classList.contains("add-to-cart-show")) {
+				popupcatalog.classList.remove("add-to-cart-show");
+				}
+			}
+
+		});
+
+	</script>
   </body>
 </html>
