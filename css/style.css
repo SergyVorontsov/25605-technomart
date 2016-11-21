@@ -1455,22 +1455,22 @@ img {
 	vertical-align: top;
 	margin-right: 1px;
 	border-radius: 50%;
-	background-color: #282e3c;
+	background: #282e3c url("../img/spritesheet.png") no-repeat;
 	
 	transition: 
     background-color 0.2s;
 }
 
 .footer-social .social-btn-vk{
-	background: #282e3c url("../img/vk.png") no-repeat 50% 50%;
+	background-position: 0px -70px;
 }
 
 .footer-social .social-btn-fb{
-	background: #282e3c url("../img/facebook.png") no-repeat 50% 50%;
+    background-position: 5px 0px;
 }
 
 .footer-social .social-btn-inst{
-	background: #282e3c url("../img/insta.png") no-repeat 50% 50%;
+    background-position: 2px -36px;
 }
 
 .footer-social .social-btn:active,
@@ -2164,7 +2164,8 @@ input[type="radio"]:checked + label::after {
 .add-to-cart {
 	display: none;
 	position: fixed;
-	top: 40%;
+	top: 50%;
+	transform: translateY(-25%);
 	right: 50%;
 	width: 620px;
 	height: 276px;
