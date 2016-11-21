@@ -181,14 +181,30 @@
 		    <a class="main-btn" href="#">Все производители</a>
 		  </div>
 		  <div class="name-list">
-		    <a href="#" class="manufacturer-1"></a>
-		    <a href="#" class="manufacturer-2"></a>
-		    <a href="#" class="manufacturer-3"></a>
-		    <a href="#" class="manufacturer-4"></a>
-		    <a href="#" class="manufacturer-5"></a>
-		    <a href="#" class="manufacturer-6"></a>
-		    <a href="#" class="manufacturer-7"></a>
-		    <a href="#" class="manufacturer-8"></a>
+		    <a href="#" class="manufacturer-1">
+		    	<img src="img/bosch.png" width="126" height="37" alt="Перфоратор">
+		    </a>
+		    <a href="#" class="manufacturer-2">
+		    	<img src="img/makita.png" width="123" height="40" alt="Перфоратор">
+		    </a>
+		    <a href="#" class="manufacturer-3">
+		    	<img src="img/dewalt.png" width="146" height="44" alt="Перфоратор">
+		    </a>
+		    <a href="#" class="manufacturer-4">
+		    	<img src="img/interskol.png" width="200" height="88" alt="Перфоратор">
+		    </a>
+		    <a href="#" class="manufacturer-5">
+		    	<img src="img/hitachi.png" width="169" height="31" alt="Перфоратор">
+		    </a>
+		    <a href="#" class="manufacturer-6">
+		    	<img src="img/lg.png" width="121" height="73" alt="Перфоратор">
+		    </a>
+		    <a href="#" class="manufacturer-7">
+		    	<img src="img/aeg.png" width="151" height="96" alt="Перфоратор">
+		    </a>
+		    <a href="#" class="manufacturer-8">
+		    	<img src="img/metabo.png" width="204" height="69" alt="Перфоратор">
+		    </a>
 		  </div>
 	    </section>
 	  </div>
@@ -346,6 +362,13 @@
       <button class="map-close" type="button" title="Закрыть">Закрыть</button>
       <div id="yandex-map"></div>
     </div>
+    <div class="add-to-cart container clearfix">
+      <button class="add-to-cart-close" type="button" title="Закрыть">Закрыть</button>
+      <span></span>
+      <p>Товар добавлен в корзину!</p>
+      <a class="btn" href="">Оформить заказ</a>       
+      <button class="btn go-on" type="submit">Продолжить покупки</button>
+  	</div>
     <div class="modal-overlay"></div>
 
 	<script>
@@ -358,7 +381,10 @@
 		var comment = popup.querySelector("[name=comment]");
 		var storage = localStorage.getItem("login");
 		var overlay = document.querySelector(".modal-overlay");
-
+		
+		var buybut = document.querySelectorAll(".buy");
+		var popupcatalog = document.querySelector(".add-to-cart");
+		var closebform = document.querySelector(".add-to-cart-close");
 
 		var mapbutton = document.querySelector(".openmap");
 		var map = document.querySelector(".modal-content-map");
@@ -381,6 +407,8 @@
 			popup.classList.remove("modal-content-show");
 			popup.classList.remove("modal-error");
 			map.classList.remove("modal-content-map-show");
+			popupcatalog.classList.remove("add-to-cart-show");
+
 		});
 
 		closeform.addEventListener("click", function(event) {
@@ -433,6 +461,31 @@
 				}
 			}
 		});
+
+
+		for (var i = buybut.length - 1; i >= 0; i--) {
+  			buybut[i].addEventListener("click", function(event) {
+    		event.preventDefault();
+    		popupcatalog.classList.add("add-to-cart-show");
+    		overlay.classList.add("modal-overlay-show");
+  			});
+		}
+
+		closebform.addEventListener("click", function(event) {
+			event.preventDefault();
+			popupcatalog.classList.remove("add-to-cart-show");
+			overlay.classList.remove("modal-overlay-show");
+		});
+
+		window.addEventListener("keydown", function(event) {
+			if (event.keyCode === 27) {
+				if (popupcatalog.classList.contains("add-to-cart-show")) {
+				popupcatalog.classList.remove("add-to-cart-show");
+				overlay.classList.remove("modal-overlay-show");
+				}
+			}
+		});
+
 	</script>
 	<script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=vYNqRQNbeDPjOK9BEYseL41phqefEYxU&amp;width=940&amp;height=446&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex-map"></script>
   </body>
