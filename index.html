@@ -253,7 +253,7 @@
 		  <h2>Контакты</h2>
 		  <p>Вы можете забрать товар сами,<br>
 		  заехав в наш офис:</p>
-		  <a class="openmap" href=""><img src="img/map.jpg" width="300" height="158" alt="Карта"></a>
+		  <a class="openmap" href="https://yandex.ua/maps/?lang=ru"><img src="img/map.jpg" width="300" height="158" alt="Карта"></a>
 		  <a class="main-btn feedback-btn" href="#">Заблудились? Напишите нам!</a>
 		</div> 
 	  </div> 
@@ -331,7 +331,7 @@
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       	<label class="user-name half-width">Ваше имя:
-          <input type="text" name="name" placeholder="Представтесь, пожалуйста">
+          <input type="text" name="login" placeholder="Представтесь, пожалуйста">
           </label>
         <label class="user-mail half-width">Ваш e-mail:
           <input type="text" name="mail" placeholder="Для отправки ответа">
@@ -353,11 +353,12 @@
 		var popup = document.querySelector(".modal-content"); 
 		var closeform = document.querySelector(".modal-content-close");
 		var form = popup.querySelector("form");
-		var name = popup.querySelector("[name=name]");
+		var login = popup.querySelector("[name=login]");
 		var mail = popup.querySelector("[name=mail]");
 		var comment = popup.querySelector("[name=comment]");
-		var storage = localStorage.getItem("name");
-		
+		var storage = localStorage.getItem("login");
+		var overlay = document.querySelector(".modal-overlay");
+
 
 		var mapbutton = document.querySelector(".openmap");
 		var map = document.querySelector(".modal-content-map");
@@ -366,29 +367,38 @@
 		feedbackform.addEventListener("click", function(event) {
 			event.preventDefault();
 			popup.classList.add("modal-content-show");
+			overlay.classList.add("modal-overlay-show");
 			if(storage) {
-				name.value = storage;
+				login.value = storage;
 				mail.focus();
 			} else {
-				name.focus();
+				login.focus();
 			}
+		});
+
+		overlay.addEventListener("click", function(event) {
+			overlay.classList.remove("modal-overlay-show");
+			popup.classList.remove("modal-content-show");
+			popup.classList.remove("modal-error");
+			map.classList.remove("modal-content-map-show");
 		});
 
 		closeform.addEventListener("click", function(event) {
 			event.preventDefault();
 			popup.classList.remove("modal-content-show");
 			popup.classList.remove("modal-error");
+			overlay.classList.remove("modal-overlay-show");
 		});
 
 		form.addEventListener("submit", function(event) {
-			if (!name.value || !mail.value || !comment.value) {
+			if (!login.value || !mail.value || !comment.value) {
 			event.preventDefault();
 			popup.classList.remove("modal-error");
           	popup.offsetWidth = popup.offsetWidth;
 			popup.classList.add("modal-error");
 			} 
 			else {
-				localStorage.setItem("name", name.value);
+				localStorage.setItem("login", login.value);
 			} 
 		});
 
@@ -397,6 +407,7 @@
 				if (popup.classList.contains("modal-content-show")) {
 				popup.classList.remove("modal-content-show");
 				popup.classList.remove("modal-error");
+				overlay.classList.remove("modal-overlay-show");
 				}
 			}
 
@@ -405,17 +416,20 @@
 		mapbutton.addEventListener("click", function(event) {
 			event.preventDefault();
 			map.classList.add("modal-content-map-show");
+			overlay.classList.add("modal-overlay-show");
 		});
 
 		closemap.addEventListener("click", function(event) {
 			event.preventDefault();
 			map.classList.remove("modal-content-map-show");
+			overlay.classList.remove("modal-overlay-show");
 		});
 
 		window.addEventListener("keydown", function(event) {
 			if (event.keyCode === 27) {
 				if (map.classList.contains("modal-content-map-show")) {
 				map.classList.remove("modal-content-map-show");
+				overlay.classList.remove("modal-overlay-show");
 				}
 			}
 		});
